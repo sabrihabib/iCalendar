@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="proectCalendar" nsURI="http://www.example.org/proectCalendar"
+    nsPrefix="proectCalendar">
+  <eClassifiers xsi:type="ecore:EClass" name="Calendar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="todo" upperBound="-1" eType="#//TODO"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="journal" upperBound="-1"
+        eType="#//JOURNAL" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-1"
+        eType="#//EVENT" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timezone" upperBound="-1"
+        eType="#//TIMEZONE" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="freebusy" upperBound="-1"
+        eType="#//FREEBUSY" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TODO">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alarm" upperBound="-1"
+        eType="#//ALARM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ALARM"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JOURNAL"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EVENT">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alarm" upperBound="-1"
+        eType="#//ALARM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TIMEZONE">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="standard" upperBound="-1"
+        eType="#//STANDARD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="daylight" eType="#//DAYLIGHT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FREEBUSY"/>
+  <eClassifiers xsi:type="ecore:EClass" name="STANDARD"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DAYLIGHT"/>
+</ecore:EPackage>
