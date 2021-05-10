@@ -9,27 +9,28 @@
   <foreignModel>proectCalendar.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="ProectCalendar" disposableProviderFactory="true" ecorePackage="proectCalendar.ecore#/">
-    <genClasses ecoreClass="proectCalendar.ecore#//Calendar">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Calendar/todo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Calendar/journal"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Calendar/event"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Calendar/timezone"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Calendar/freebusy"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vcalendar">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/journal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/timezone"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/freebusy"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//TODO">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//TODO/alarm"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vtodo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtodo/alarm"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//ALARM"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//JOURNAL"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//EVENT">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//EVENT/alarm"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Valarm"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vjournal"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vevent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vevent/alarm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/description"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//TIMEZONE">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//TIMEZONE/standard"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//TIMEZONE/daylight"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vtimezone">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/standard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/daylight"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//FREEBUSY"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//STANDARD"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//DAYLIGHT"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Freebusy"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Standard"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Daylight"/>
   </genPackages>
 </genmodel:GenModel>

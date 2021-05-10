@@ -2,34 +2,35 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="proectCalendar" nsURI="http://www.example.org/proectCalendar"
     nsPrefix="proectCalendar">
-  <eClassifiers xsi:type="ecore:EClass" name="Calendar">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="todo" upperBound="-1" eType="#//TODO"
+  <eClassifiers xsi:type="ecore:EClass" name="Vcalendar">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="todo" upperBound="-1" eType="#//Vtodo"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="journal" upperBound="-1"
-        eType="#//JOURNAL" containment="true"/>
+        eType="#//Vjournal" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" upperBound="-1"
-        eType="#//EVENT" containment="true"/>
+        eType="#//Vevent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="timezone" upperBound="-1"
-        eType="#//TIMEZONE" containment="true"/>
+        eType="#//Vtimezone" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="freebusy" upperBound="-1"
-        eType="#//FREEBUSY" containment="true"/>
+        eType="#//Freebusy" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TODO">
+  <eClassifiers xsi:type="ecore:EClass" name="Vtodo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="alarm" upperBound="-1"
-        eType="#//ALARM" containment="true"/>
+        eType="#//Valarm" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ALARM"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JOURNAL"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EVENT">
+  <eClassifiers xsi:type="ecore:EClass" name="Valarm"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vjournal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vevent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="alarm" upperBound="-1"
-        eType="#//ALARM" containment="true"/>
+        eType="#//Valarm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TIMEZONE">
+  <eClassifiers xsi:type="ecore:EClass" name="Vtimezone">
     <eStructuralFeatures xsi:type="ecore:EReference" name="standard" upperBound="-1"
-        eType="#//STANDARD" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="daylight" eType="#//DAYLIGHT"/>
+        eType="#//Standard" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="daylight" eType="#//Daylight"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FREEBUSY"/>
-  <eClassifiers xsi:type="ecore:EClass" name="STANDARD"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DAYLIGHT"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Freebusy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Standard"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Daylight"/>
 </ecore:EPackage>

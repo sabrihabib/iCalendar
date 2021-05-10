@@ -5,7 +5,7 @@
     <semanticResources>proectCalendar.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_4Lr18LGTEeu03YCTIo-_eQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_4MsikLGTEeu03YCTIo-_eQ" name="proectCalendar" repPath="#_4MegILGTEeu03YCTIo-_eQ" changeId="8859be36-05d9-4423-aeba-564424138aa4">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_4MsikLGTEeu03YCTIo-_eQ" name="proectCalendar" repPath="#_4MegILGTEeu03YCTIo-_eQ" changeId="3ad1cd0e-5579-48da-a6ab-acc109b51fdd">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="proectCalendar.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -39,7 +39,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_9mlYY7GTEeu03YCTIo-_eQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_9mkxUbGTEeu03YCTIo-_eQ" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9mkxUrGTEeu03YCTIo-_eQ" x="630" y="50" width="120" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9mkxUrGTEeu03YCTIo-_eQ" x="615" y="55" width="120" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="__rrcoLGTEeu03YCTIo-_eQ" type="2003" element="__ri5wLGTEeu03YCTIo-_eQ">
           <children xmi:type="notation:Node" xmi:id="__rsDsLGTEeu03YCTIo-_eQ" type="5007"/>
@@ -53,6 +53,10 @@
         <children xmi:type="notation:Node" xmi:id="_C_aeQLGUEeu03YCTIo-_eQ" type="2003" element="_C_QtQLGUEeu03YCTIo-_eQ">
           <children xmi:type="notation:Node" xmi:id="_C_bsYLGUEeu03YCTIo-_eQ" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_C_bsYbGUEeu03YCTIo-_eQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_hZqLcLGaEeu03YCTIo-_eQ" type="3010" element="_hZPUsLGaEeu03YCTIo-_eQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_hZqLcbGaEeu03YCTIo-_eQ" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_hZqLcrGaEeu03YCTIo-_eQ"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_C_bsYrGUEeu03YCTIo-_eQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_C_bsY7GUEeu03YCTIo-_eQ"/>
           </children>
@@ -114,17 +118,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_GrPPwLGUEeu03YCTIo-_eQ" type="4001" element="_GrBNU7GUEeu03YCTIo-_eQ" source="_8IlwYLGTEeu03YCTIo-_eQ" target="_9mkxULGTEeu03YCTIo-_eQ">
           <children xmi:type="notation:Node" xmi:id="_GrP20LGUEeu03YCTIo-_eQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrP20bGUEeu03YCTIo-_eQ" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrP20bGUEeu03YCTIo-_eQ" x="10" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GrP20rGUEeu03YCTIo-_eQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrQd4LGUEeu03YCTIo-_eQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrQd4LGUEeu03YCTIo-_eQ" x="1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_GrQd4bGUEeu03YCTIo-_eQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrQd4rGUEeu03YCTIo-_eQ" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GrQd4rGUEeu03YCTIo-_eQ" x="14" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_GrPPwbGUEeu03YCTIo-_eQ" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_GrPPwrGUEeu03YCTIo-_eQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GrPPw7GUEeu03YCTIo-_eQ" points="[0, 0, -162, -10]$[81, 0, -81, -10]$[81, 10, -81, 0]$[162, 10, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GrPPw7GUEeu03YCTIo-_eQ" points="[0, 0, -147, -15]$[81, 0, -66, -15]$[81, 15, -66, 0]$[147, 15, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GrRE8LGUEeu03YCTIo-_eQ" id="(1.0,0.6122448979591837)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GrRE8bGUEeu03YCTIo-_eQ" id="(0.0,0.7142857142857143)"/>
         </edges>
@@ -162,17 +166,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_I9kewLGUEeu03YCTIo-_eQ" type="4001" element="_I9QVsLGUEeu03YCTIo-_eQ" source="_C_aeQLGUEeu03YCTIo-_eQ" target="_9mkxULGTEeu03YCTIo-_eQ">
           <children xmi:type="notation:Node" xmi:id="_I9kexLGUEeu03YCTIo-_eQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9kexbGUEeu03YCTIo-_eQ" x="-52" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9kexbGUEeu03YCTIo-_eQ" x="-42" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_I9kexrGUEeu03YCTIo-_eQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9kex7GUEeu03YCTIo-_eQ" x="-6" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9kex7GUEeu03YCTIo-_eQ" x="-3" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_I9lF0LGUEeu03YCTIo-_eQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9lF0bGUEeu03YCTIo-_eQ" x="-49" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I9lF0bGUEeu03YCTIo-_eQ" x="-47" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_I9kewbGUEeu03YCTIo-_eQ" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_I9kewrGUEeu03YCTIo-_eQ" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I9kew7GUEeu03YCTIo-_eQ" points="[0, 0, -227, 205]$[227, 0, 0, 205]$[227, -205, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I9kew7GUEeu03YCTIo-_eQ" points="[0, 0, -212, 200]$[212, 0, 0, 200]$[212, -200, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I9lF0rGUEeu03YCTIo-_eQ" id="(1.0,0.6428571428571429)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I9lF07GUEeu03YCTIo-_eQ" id="(0.5932203389830508,1.0)"/>
         </edges>
@@ -255,33 +259,36 @@
         </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_5QjzULGTEeu03YCTIo-_eQ" name="Calendar" tooltipText="" outgoingEdges="_GBS64LGUEeu03YCTIo-_eQ _HZ6ToLGUEeu03YCTIo-_eQ _IENN0LGUEeu03YCTIo-_eQ _Pc8V8LGUEeu03YCTIo-_eQ _cjn4ULGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Calendar"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Calendar"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_5QjzULGTEeu03YCTIo-_eQ" name="Vcalendar" tooltipText="" outgoingEdges="_GBS64LGUEeu03YCTIo-_eQ _HZ6ToLGUEeu03YCTIo-_eQ _IENN0LGUEeu03YCTIo-_eQ _Pc8V8LGUEeu03YCTIo-_eQ _cjn4ULGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vcalendar"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vcalendar"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Y8CGkLGUEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8Ib_YLGTEeu03YCTIo-_eQ" name="TODO" tooltipText="" outgoingEdges="_GrBNU7GUEeu03YCTIo-_eQ" incomingEdges="_GBS64LGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//TODO"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//TODO"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8Ib_YLGTEeu03YCTIo-_eQ" name="Vtodo" tooltipText="" outgoingEdges="_GrBNU7GUEeu03YCTIo-_eQ" incomingEdges="_GBS64LGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vtodo"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vtodo"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_8IdNgLGTEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9mbAULGTEeu03YCTIo-_eQ" name="ALARM" tooltipText="" incomingEdges="_GrBNU7GUEeu03YCTIo-_eQ _I9QVsLGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//ALARM"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//ALARM"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9mbAULGTEeu03YCTIo-_eQ" name="Valarm" tooltipText="" incomingEdges="_GrBNU7GUEeu03YCTIo-_eQ _I9QVsLGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Valarm"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Valarm"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_9mbnYLGTEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__ri5wLGTEeu03YCTIo-_eQ" name="JOURNAL" tooltipText="" incomingEdges="_HZ6ToLGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//JOURNAL"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//JOURNAL"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__ri5wLGTEeu03YCTIo-_eQ" name="Vjournal" tooltipText="" incomingEdges="_HZ6ToLGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vjournal"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vjournal"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -290,20 +297,28 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_C_QtQLGUEeu03YCTIo-_eQ" name="EVENT" tooltipText="" outgoingEdges="_I9QVsLGUEeu03YCTIo-_eQ" incomingEdges="_IENN0LGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//EVENT"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//EVENT"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_C_QtQLGUEeu03YCTIo-_eQ" name="Vevent" tooltipText="" outgoingEdges="_I9QVsLGUEeu03YCTIo-_eQ" incomingEdges="_IENN0LGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vevent"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vevent"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_C_RUULGUEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_m5ClQrGaEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_hZPUsLGaEeu03YCTIo-_eQ" name="description : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vevent/description"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vevent/description"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_m5HdwbGaEeu03YCTIo-_eQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_GBS64LGUEeu03YCTIo-_eQ" name="[0..*] todo" sourceNode="_5QjzULGTEeu03YCTIo-_eQ" targetNode="_8Ib_YLGTEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/todo"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/todo"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/todo"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/todo"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_GBV-M7GUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_GBV-NbGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -315,8 +330,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_GrBNU7GUEeu03YCTIo-_eQ" name="[0..*] alarm" sourceNode="_8Ib_YLGTEeu03YCTIo-_eQ" targetNode="_9mbAULGTEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//TODO/alarm"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//TODO/alarm"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtodo/alarm"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtodo/alarm"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_GrCbcLGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_GrCbcrGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -328,8 +343,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HZ6ToLGUEeu03YCTIo-_eQ" name="[0..*] journal" sourceNode="_5QjzULGTEeu03YCTIo-_eQ" targetNode="__ri5wLGTEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/journal"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/journal"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/journal"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/journal"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HZ8I0LGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HZ8I0rGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -341,8 +356,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IENN0LGUEeu03YCTIo-_eQ" name="[0..*] event" sourceNode="_5QjzULGTEeu03YCTIo-_eQ" targetNode="_C_QtQLGUEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/event"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/event"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/event"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/event"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IEN04LGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IEN04rGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -354,8 +369,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_I9QVsLGUEeu03YCTIo-_eQ" name="[0..*] alarm" sourceNode="_C_QtQLGUEeu03YCTIo-_eQ" targetNode="_9mbAULGTEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//EVENT/alarm"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//EVENT/alarm"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vevent/alarm"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vevent/alarm"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_I9SK4LGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_I9SK4rGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -366,9 +381,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LmZiMLGUEeu03YCTIo-_eQ" name="TIMEZONE" tooltipText="" outgoingEdges="_qzYiprGUEeu03YCTIo-_eQ _snYP1rGUEeu03YCTIo-_eQ" incomingEdges="_Pc8V8LGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//TIMEZONE"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//TIMEZONE"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_LmZiMLGUEeu03YCTIo-_eQ" name="Vtimezone" tooltipText="" outgoingEdges="_qzYiprGUEeu03YCTIo-_eQ _snYP1rGUEeu03YCTIo-_eQ" incomingEdges="_Pc8V8LGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vtimezone"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vtimezone"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -378,8 +393,8 @@
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Pc8V8LGUEeu03YCTIo-_eQ" name="[0..*] timezone" sourceNode="_5QjzULGTEeu03YCTIo-_eQ" targetNode="_LmZiMLGUEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/timezone"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/timezone"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/timezone"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/timezone"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Pc89ALGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Pc89ArGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -390,9 +405,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_ZkplwLGUEeu03YCTIo-_eQ" name="FREEBUSY" tooltipText="" incomingEdges="_cjn4ULGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//FREEBUSY"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//FREEBUSY"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_ZkplwLGUEeu03YCTIo-_eQ" name="Freebusy" tooltipText="" incomingEdges="_cjn4ULGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Freebusy"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Freebusy"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -402,8 +417,8 @@
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_cjn4ULGUEeu03YCTIo-_eQ" name="[0..*] freebusy" sourceNode="_5QjzULGTEeu03YCTIo-_eQ" targetNode="_ZkplwLGUEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/freebusy"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Calendar/freebusy"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/freebusy"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vcalendar/freebusy"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cjpGcLGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cjpGcrGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -414,25 +429,25 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_db6yQLGUEeu03YCTIo-_eQ" name="STANDARD" tooltipText="" incomingEdges="_qzYiprGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//STANDARD"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//STANDARD"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_db6yQLGUEeu03YCTIo-_eQ" name="Standard" tooltipText="" incomingEdges="_qzYiprGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Standard"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Standard"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_db7ZULGUEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_fG34MLGUEeu03YCTIo-_eQ" name="DAYLIGHT" tooltipText="" incomingEdges="_snYP1rGUEeu03YCTIo-_eQ" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//DAYLIGHT"/>
-      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//DAYLIGHT"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_fG34MLGUEeu03YCTIo-_eQ" name="Daylight" tooltipText="" incomingEdges="_snYP1rGUEeu03YCTIo-_eQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Daylight"/>
+      <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Daylight"/>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_fG4fQLGUEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qzYiprGUEeu03YCTIo-_eQ" name="[0..*] standard" sourceNode="_LmZiMLGUEeu03YCTIo-_eQ" targetNode="_db6yQLGUEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//TIMEZONE/standard"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//TIMEZONE/standard"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtimezone/standard"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtimezone/standard"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_qzZwwLGUEeu03YCTIo-_eQ" description="_GBV-MLGUEeu03YCTIo-_eQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_qzZwwrGUEeu03YCTIo-_eQ" showIcon="false">
           <customFeatures>labelSize</customFeatures>
@@ -444,8 +459,8 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_snYP1rGUEeu03YCTIo-_eQ" name="[0..1] daylight" sourceNode="_LmZiMLGUEeu03YCTIo-_eQ" targetNode="_fG34MLGUEeu03YCTIo-_eQ">
-      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//TIMEZONE/daylight"/>
-      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//TIMEZONE/daylight"/>
+      <target xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtimezone/daylight"/>
+      <semanticElements xmi:type="ecore:EReference" href="proectCalendar.ecore#//Vtimezone/daylight"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_snY24LGUEeu03YCTIo-_eQ" routingStyle="manhattan" strokeColor="0,0,0">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_snY24rGUEeu03YCTIo-_eQ" showIcon="false">
