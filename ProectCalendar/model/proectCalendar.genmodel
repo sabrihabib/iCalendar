@@ -18,9 +18,28 @@
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vtodo">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtodo/alarm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/dtstamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/uid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/completed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/created"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/status"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//Valarm"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//Vjournal"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Valarm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/trigger"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/repeat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/description"/>
+    </genClasses>
+    <genClasses ecoreClass="proectCalendar.ecore#//Vjournal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/dtstamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/uid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/dtstart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/summuary"/>
+    </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vevent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vevent/alarm"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/description"/>
