@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated proectCalendar -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="proectCalendar.presentation.ProectCalendarModelWizardID"
+            name="%_UI_ProectCalendarModelWizard_label"
+            class="proectCalendar.presentation.ProectCalendarModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProectCalendarModelFile.gif">
+         <description>%_UI_ProectCalendarModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated proectCalendar -->
+      <editor
+            id="proectCalendar.presentation.ProectCalendarEditorID"
+            name="%_UI_ProectCalendarEditor_label"
+            icon="icons/full/obj16/ProectCalendarModelFile.gif"
+            extensions="proectcalendar"
+            class="proectCalendar.presentation.ProectCalendarEditor"
+            contributorClass="proectCalendar.presentation.ProectCalendarActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

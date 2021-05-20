@@ -5,7 +5,7 @@
     <semanticResources>proectCalendar.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_4Lr18LGTEeu03YCTIo-_eQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_4MsikLGTEeu03YCTIo-_eQ" name="proectCalendar" repPath="#_4MegILGTEeu03YCTIo-_eQ" changeId="211c3e6b-eb5a-4b32-a0b1-2a71743f5702">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_4MsikLGTEeu03YCTIo-_eQ" name="proectCalendar" repPath="#_4MegILGTEeu03YCTIo-_eQ" changeId="ba699795-1e38-4b60-b022-0ce27fa0374a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="proectCalendar.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -17,6 +17,14 @@
         <children xmi:type="notation:Node" xmi:id="_5QzD4LGTEeu03YCTIo-_eQ" type="2003" element="_5QjzULGTEeu03YCTIo-_eQ">
           <children xmi:type="notation:Node" xmi:id="_5Q2HMLGTEeu03YCTIo-_eQ" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_5Q2uQLGTEeu03YCTIo-_eQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_y3ujYLlyEeuU5MRfEoxMPA" type="3010" element="_y3JUkLlyEeuU5MRfEoxMPA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_y3ujYblyEeuU5MRfEoxMPA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_y3ujYrlyEeuU5MRfEoxMPA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_2Lwf8LlyEeuU5MRfEoxMPA" type="3010" element="_2LVCILlyEeuU5MRfEoxMPA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_2Lwf8blyEeuU5MRfEoxMPA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_2Lwf8rlyEeuU5MRfEoxMPA"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_5Q2uQbGTEeu03YCTIo-_eQ"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_5Q2uQrGTEeu03YCTIo-_eQ"/>
           </children>
@@ -392,10 +400,26 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_5QjzULGTEeu03YCTIo-_eQ" name="Vcalendar" tooltipText="" outgoingEdges="_GBS64LGUEeu03YCTIo-_eQ _HZ6ToLGUEeu03YCTIo-_eQ _IENN0LGUEeu03YCTIo-_eQ _Pc8V8LGUEeu03YCTIo-_eQ _cjn4ULGUEeu03YCTIo-_eQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vcalendar"/>
       <semanticElements xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vcalendar"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Y8CGkLGUEeu03YCTIo-_eQ" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_3o2JALlyEeuU5MRfEoxMPA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_y3JUkLlyEeuU5MRfEoxMPA" name="version : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vcalendar/version"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vcalendar/version"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_1PBx8blyEeuU5MRfEoxMPA" labelAlignment="LEFT" description="_6Er_4rS9EeuFIP4IHWzp4g">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_2LVCILlyEeuU5MRfEoxMPA" name="prodid : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vcalendar/prodid"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="proectCalendar.ecore#//Vcalendar/prodid"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_3o4lQrlyEeuU5MRfEoxMPA" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8Ib_YLGTEeu03YCTIo-_eQ" name="Vtodo" tooltipText="" outgoingEdges="_GrBNU7GUEeu03YCTIo-_eQ" incomingEdges="_GBS64LGUEeu03YCTIo-_eQ" width="12" height="10">
       <target xmi:type="ecore:EClass" href="proectCalendar.ecore#//Vtodo"/>
