@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            commandId="ProectCalendar.ui.handler1">
+            commandId="ProectCalendar.ui.generateRFC">
       </handler>
    </extension>
    <extension
@@ -15,7 +15,7 @@
          <menu
                label="MyMenus">
             <command
-                  commandId="ProectCalendar.ui.command1"
+                  commandId="ProectCalendar.ui.generateRFC"
                   label="generate .rfc file"
                   style="push">
             </command>
