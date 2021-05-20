@@ -43,12 +43,27 @@
     <genClasses ecoreClass="proectCalendar.ecore#//Vevent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vevent/alarm"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/uid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/dtstamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/dtstart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/dtend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/duration"/>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vtimezone">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/standard"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/daylight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtimezone/tzid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtimezone/last_mod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtimezone/tzurl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/daylight"/>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//Freebusy"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Freebusy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/uid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/dtstamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/dtstart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/dtend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/attendee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/organizer"/>
+    </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Standard"/>
     <genClasses ecoreClass="proectCalendar.ecore#//Daylight"/>
   </genPackages>
