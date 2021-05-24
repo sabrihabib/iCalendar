@@ -7,30 +7,28 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import proectCalendar.Instruction;
 import proectCalendar.ProectCalendarFactory;
 import proectCalendar.ProectCalendarPackage;
-import proectCalendar.Vcalendar;
 
 /**
- * This is the item provider adapter for a {@link proectCalendar.Vcalendar} object.
+ * This is the item provider adapter for a {@link proectCalendar.Instruction} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class VcalendarItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class InstructionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +36,7 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VcalendarItemProvider(AdapterFactory adapterFactory) {
+	public InstructionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,42 +51,8 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVersionPropertyDescriptor(object);
-			addProdidPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Version feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVersionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Vcalendar_version_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Vcalendar_version_feature",
-								"_UI_Vcalendar_type"),
-						ProectCalendarPackage.Literals.VCALENDAR__VERSION, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Prodid feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProdidPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Vcalendar_prodid_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Vcalendar_prodid_feature",
-								"_UI_Vcalendar_type"),
-						ProectCalendarPackage.Literals.VCALENDAR__PRODID, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -103,7 +67,11 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ProectCalendarPackage.Literals.VCALENDAR__INSTRUCTION);
+			childrenFeatures.add(ProectCalendarPackage.Literals.INSTRUCTION__TODO);
+			childrenFeatures.add(ProectCalendarPackage.Literals.INSTRUCTION__JOURNAL);
+			childrenFeatures.add(ProectCalendarPackage.Literals.INSTRUCTION__EVENT);
+			childrenFeatures.add(ProectCalendarPackage.Literals.INSTRUCTION__TIMEZONE);
+			childrenFeatures.add(ProectCalendarPackage.Literals.INSTRUCTION__FREEBUSY);
 		}
 		return childrenFeatures;
 	}
@@ -122,14 +90,14 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	}
 
 	/**
-	 * This returns Vcalendar.gif.
+	 * This returns Instruction.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Vcalendar"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Instruction"));
 	}
 
 	/**
@@ -150,9 +118,7 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Vcalendar) object).getVersion();
-		return label == null || label.length() == 0 ? getString("_UI_Vcalendar_type")
-				: getString("_UI_Vcalendar_type") + " " + label;
+		return getString("_UI_Instruction_type");
 	}
 
 	/**
@@ -166,12 +132,12 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Vcalendar.class)) {
-		case ProectCalendarPackage.VCALENDAR__VERSION:
-		case ProectCalendarPackage.VCALENDAR__PRODID:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+		switch (notification.getFeatureID(Instruction.class)) {
+		case ProectCalendarPackage.INSTRUCTION__TODO:
+		case ProectCalendarPackage.INSTRUCTION__JOURNAL:
+		case ProectCalendarPackage.INSTRUCTION__EVENT:
+		case ProectCalendarPackage.INSTRUCTION__TIMEZONE:
+		case ProectCalendarPackage.INSTRUCTION__FREEBUSY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -189,8 +155,20 @@ public class VcalendarItemProvider extends ItemProviderAdapter implements IEditi
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.VCALENDAR__INSTRUCTION,
-				ProectCalendarFactory.eINSTANCE.createInstruction()));
+		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.INSTRUCTION__TODO,
+				ProectCalendarFactory.eINSTANCE.createVtodo()));
+
+		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.INSTRUCTION__JOURNAL,
+				ProectCalendarFactory.eINSTANCE.createVjournal()));
+
+		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.INSTRUCTION__EVENT,
+				ProectCalendarFactory.eINSTANCE.createVevent()));
+
+		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.INSTRUCTION__TIMEZONE,
+				ProectCalendarFactory.eINSTANCE.createVtimezone()));
+
+		newChildDescriptors.add(createChildParameter(ProectCalendarPackage.Literals.INSTRUCTION__FREEBUSY,
+				ProectCalendarFactory.eINSTANCE.createFreebusy()));
 	}
 
 	/**

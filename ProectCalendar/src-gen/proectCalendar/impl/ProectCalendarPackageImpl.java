@@ -4,6 +4,7 @@ package proectCalendar.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -11,11 +12,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import proectCalendar.Daylight;
 import proectCalendar.Freebusy;
+import proectCalendar.Instruction;
 import proectCalendar.ProectCalendarFactory;
 import proectCalendar.ProectCalendarPackage;
 import proectCalendar.Standard;
 import proectCalendar.Valarm;
 import proectCalendar.Vcalendar;
+import proectCalendar.VcalendarVisitor;
 import proectCalendar.Vevent;
 import proectCalendar.Vjournal;
 import proectCalendar.Vtimezone;
@@ -90,6 +93,20 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * @generated
 	 */
 	private EClass daylightEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass instructionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vcalendarVisitorEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -169,53 +186,8 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVcalendar_Todo() {
-		return (EReference) vcalendarEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVcalendar_Journal() {
-		return (EReference) vcalendarEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVcalendar_Event() {
-		return (EReference) vcalendarEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVcalendar_Timezone() {
-		return (EReference) vcalendarEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVcalendar_Freebusy() {
-		return (EReference) vcalendarEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getVcalendar_Version() {
-		return (EAttribute) vcalendarEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) vcalendarEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -224,7 +196,25 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * @generated
 	 */
 	public EAttribute getVcalendar_Prodid() {
-		return (EAttribute) vcalendarEClass.getEStructuralFeatures().get(6);
+		return (EAttribute) vcalendarEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVcalendar_Instruction() {
+		return (EReference) vcalendarEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendar__Accept__VcalendarVisitor() {
+		return vcalendarEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -313,6 +303,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getVtodo__Accept__VcalendarVisitor() {
+		return vtodoEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getValarm() {
 		return valarmEClass;
 	}
@@ -367,6 +366,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getValarm__Accept__VcalendarVisitor() {
+		return valarmEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVjournal() {
 		return vjournalEClass;
 	}
@@ -414,6 +422,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 */
 	public EAttribute getVjournal_Summuary() {
 		return (EAttribute) vjournalEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVjournal__Accept__VcalendarVisitor() {
+		return vjournalEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -493,6 +510,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getVevent__Accept__VcalendarVisitor() {
+		return veventEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVtimezone() {
 		return vtimezoneEClass;
 	}
@@ -540,6 +566,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 */
 	public EReference getVtimezone_Daylight() {
 		return (EReference) vtimezoneEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVtimezone__Accept__VcalendarVisitor() {
+		return vtimezoneEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -610,6 +645,15 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getFreebusy__Accept__VcalendarVisitor() {
+		return freebusyEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStandard() {
 		return standardEClass;
 	}
@@ -619,8 +663,152 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getStandard__Accept__VcalendarVisitor() {
+		return standardEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDaylight() {
 		return daylightEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getDaylight__Accept__VcalendarVisitor() {
+		return daylightEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInstruction() {
+		return instructionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_Todo() {
+		return (EReference) instructionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_Journal() {
+		return (EReference) instructionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_Event() {
+		return (EReference) instructionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_Timezone() {
+		return (EReference) instructionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInstruction_Freebusy() {
+		return (EReference) instructionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getInstruction__Accept__VcalendarVisitor() {
+		return instructionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVcalendarVisitor() {
+		return vcalendarVisitorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Vcalendar() {
+		return vcalendarVisitorEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Vtodo() {
+		return vcalendarVisitorEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Vjournal() {
+		return vcalendarVisitorEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Vevent() {
+		return vcalendarVisitorEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Vtimezone() {
+		return vcalendarVisitorEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getVcalendarVisitor__Visit__Freebusy() {
+		return vcalendarVisitorEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -653,13 +841,10 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 
 		// Create classes and their features
 		vcalendarEClass = createEClass(VCALENDAR);
-		createEReference(vcalendarEClass, VCALENDAR__TODO);
-		createEReference(vcalendarEClass, VCALENDAR__JOURNAL);
-		createEReference(vcalendarEClass, VCALENDAR__EVENT);
-		createEReference(vcalendarEClass, VCALENDAR__TIMEZONE);
-		createEReference(vcalendarEClass, VCALENDAR__FREEBUSY);
 		createEAttribute(vcalendarEClass, VCALENDAR__VERSION);
 		createEAttribute(vcalendarEClass, VCALENDAR__PRODID);
+		createEReference(vcalendarEClass, VCALENDAR__INSTRUCTION);
+		createEOperation(vcalendarEClass, VCALENDAR___ACCEPT__VCALENDARVISITOR);
 
 		vtodoEClass = createEClass(VTODO);
 		createEReference(vtodoEClass, VTODO__ALARM);
@@ -670,6 +855,7 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(vtodoEClass, VTODO__CREATED);
 		createEAttribute(vtodoEClass, VTODO__DESCRIPTION);
 		createEAttribute(vtodoEClass, VTODO__STATUS);
+		createEOperation(vtodoEClass, VTODO___ACCEPT__VCALENDARVISITOR);
 
 		valarmEClass = createEClass(VALARM);
 		createEAttribute(valarmEClass, VALARM__ACTION);
@@ -677,6 +863,7 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(valarmEClass, VALARM__DURATION);
 		createEAttribute(valarmEClass, VALARM__REPEAT);
 		createEAttribute(valarmEClass, VALARM__DESCRIPTION);
+		createEOperation(valarmEClass, VALARM___ACCEPT__VCALENDARVISITOR);
 
 		vjournalEClass = createEClass(VJOURNAL);
 		createEAttribute(vjournalEClass, VJOURNAL__DTSTAMP);
@@ -684,6 +871,7 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(vjournalEClass, VJOURNAL__DTSTART);
 		createEAttribute(vjournalEClass, VJOURNAL__DESCRIPTION);
 		createEAttribute(vjournalEClass, VJOURNAL__SUMMUARY);
+		createEOperation(vjournalEClass, VJOURNAL___ACCEPT__VCALENDARVISITOR);
 
 		veventEClass = createEClass(VEVENT);
 		createEReference(veventEClass, VEVENT__ALARM);
@@ -693,6 +881,7 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(veventEClass, VEVENT__DTSTART);
 		createEAttribute(veventEClass, VEVENT__DTEND);
 		createEAttribute(veventEClass, VEVENT__DURATION);
+		createEOperation(veventEClass, VEVENT___ACCEPT__VCALENDARVISITOR);
 
 		vtimezoneEClass = createEClass(VTIMEZONE);
 		createEReference(vtimezoneEClass, VTIMEZONE__STANDARD);
@@ -700,6 +889,7 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(vtimezoneEClass, VTIMEZONE__LAST_MOD);
 		createEAttribute(vtimezoneEClass, VTIMEZONE__TZURL);
 		createEReference(vtimezoneEClass, VTIMEZONE__DAYLIGHT);
+		createEOperation(vtimezoneEClass, VTIMEZONE___ACCEPT__VCALENDARVISITOR);
 
 		freebusyEClass = createEClass(FREEBUSY);
 		createEAttribute(freebusyEClass, FREEBUSY__UID);
@@ -708,10 +898,29 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		createEAttribute(freebusyEClass, FREEBUSY__DTEND);
 		createEAttribute(freebusyEClass, FREEBUSY__ATTENDEE);
 		createEAttribute(freebusyEClass, FREEBUSY__ORGANIZER);
+		createEOperation(freebusyEClass, FREEBUSY___ACCEPT__VCALENDARVISITOR);
 
 		standardEClass = createEClass(STANDARD);
+		createEOperation(standardEClass, STANDARD___ACCEPT__VCALENDARVISITOR);
 
 		daylightEClass = createEClass(DAYLIGHT);
+		createEOperation(daylightEClass, DAYLIGHT___ACCEPT__VCALENDARVISITOR);
+
+		instructionEClass = createEClass(INSTRUCTION);
+		createEReference(instructionEClass, INSTRUCTION__TODO);
+		createEReference(instructionEClass, INSTRUCTION__JOURNAL);
+		createEReference(instructionEClass, INSTRUCTION__EVENT);
+		createEReference(instructionEClass, INSTRUCTION__TIMEZONE);
+		createEReference(instructionEClass, INSTRUCTION__FREEBUSY);
+		createEOperation(instructionEClass, INSTRUCTION___ACCEPT__VCALENDARVISITOR);
+
+		vcalendarVisitorEClass = createEClass(VCALENDAR_VISITOR);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__VCALENDAR);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__VTODO);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__VJOURNAL);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__VEVENT);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__VTIMEZONE);
+		createEOperation(vcalendarVisitorEClass, VCALENDAR_VISITOR___VISIT__FREEBUSY);
 	}
 
 	/**
@@ -747,25 +956,17 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vcalendarEClass, Vcalendar.class, "Vcalendar", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVcalendar_Todo(), this.getVtodo(), null, "todo", null, 0, -1, Vcalendar.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getVcalendar_Journal(), this.getVjournal(), null, "journal", null, 0, -1, Vcalendar.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVcalendar_Event(), this.getVevent(), null, "event", null, 0, -1, Vcalendar.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVcalendar_Timezone(), this.getVtimezone(), null, "timezone", null, 0, -1, Vcalendar.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVcalendar_Freebusy(), this.getFreebusy(), null, "freebusy", null, 0, -1, Vcalendar.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVcalendar_Version(), ecorePackage.getEString(), "version", null, 1, 1, Vcalendar.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVcalendar_Prodid(), ecorePackage.getEString(), "prodid", null, 0, 1, Vcalendar.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVcalendar_Instruction(), this.getInstruction(), null, "instruction", null, 0, -1,
+				Vcalendar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		EOperation op = initEOperation(getVcalendar__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(vtodoEClass, Vtodo.class, "Vtodo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVtodo_Alarm(), this.getValarm(), null, "alarm", null, 0, -1, Vtodo.class, !IS_TRANSIENT,
@@ -786,6 +987,9 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		initEAttribute(getVtodo_Status(), ecorePackage.getEString(), "status", null, 0, 1, Vtodo.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getVtodo__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(valarmEClass, Valarm.class, "Valarm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getValarm_Action(), ecorePackage.getEString(), "action", null, 1, 1, Valarm.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -797,6 +1001,9 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getValarm_Description(), ecorePackage.getEString(), "description", null, 0, 1, Valarm.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getValarm__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(vjournalEClass, Vjournal.class, "Vjournal", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -810,6 +1017,9 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVjournal_Summuary(), ecorePackage.getEString(), "summuary", null, 0, 1, Vjournal.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getVjournal__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(veventEClass, Vevent.class, "Vevent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVevent_Alarm(), this.getValarm(), null, "alarm", null, 0, -1, Vevent.class, !IS_TRANSIENT,
@@ -828,6 +1038,9 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		initEAttribute(getVevent_Duration(), ecorePackage.getEString(), "duration", null, 0, 1, Vevent.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getVevent__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(vtimezoneEClass, Vtimezone.class, "Vtimezone", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVtimezone_Standard(), this.getStandard(), null, "standard", null, 0, -1, Vtimezone.class,
@@ -842,6 +1055,9 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		initEReference(getVtimezone_Daylight(), this.getDaylight(), null, "daylight", null, 0, -1, Vtimezone.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getVtimezone__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(freebusyEClass, Freebusy.class, "Freebusy", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -858,11 +1074,62 @@ public class ProectCalendarPackageImpl extends EPackageImpl implements ProectCal
 		initEAttribute(getFreebusy_Organizer(), ecorePackage.getEString(), "organizer", null, 0, 1, Freebusy.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getFreebusy__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(standardEClass, Standard.class, "Standard", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		op = initEOperation(getStandard__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(daylightEClass, Daylight.class, "Daylight", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getDaylight__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(instructionEClass, Instruction.class, "Instruction", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInstruction_Todo(), this.getVtodo(), null, "todo", null, 0, -1, Instruction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInstruction_Journal(), this.getVjournal(), null, "journal", null, 0, -1, Instruction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInstruction_Event(), this.getVevent(), null, "event", null, 0, -1, Instruction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInstruction_Timezone(), this.getVtimezone(), null, "timezone", null, 0, -1, Instruction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInstruction_Freebusy(), this.getFreebusy(), null, "freebusy", null, 0, -1, Instruction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getInstruction__Accept__VcalendarVisitor(), null, "accept", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendarVisitor(), "visitor", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(vcalendarVisitorEClass, VcalendarVisitor.class, "VcalendarVisitor", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Vcalendar(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVcalendar(), "vcalendar", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Vtodo(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVtodo(), "vtodo", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Vjournal(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVjournal(), "vjournal", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Vevent(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVevent(), "vevent", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Vtimezone(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getVtimezone(), "vtimezone", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getVcalendarVisitor__Visit__Freebusy(), null, "visit", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getFreebusy(), "freebusy", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

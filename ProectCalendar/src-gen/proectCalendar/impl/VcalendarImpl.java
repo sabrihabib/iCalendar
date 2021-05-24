@@ -2,29 +2,21 @@
  */
 package proectCalendar.impl;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import proectCalendar.Freebusy;
+import proectCalendar.Instruction;
 import proectCalendar.ProectCalendarPackage;
 import proectCalendar.Vcalendar;
-import proectCalendar.Vevent;
-import proectCalendar.Vjournal;
-import proectCalendar.Vtimezone;
-import proectCalendar.Vtodo;
+import proectCalendar.VcalendarVisitor;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,68 +26,14 @@ import proectCalendar.Vtodo;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link proectCalendar.impl.VcalendarImpl#getTodo <em>Todo</em>}</li>
- *   <li>{@link proectCalendar.impl.VcalendarImpl#getJournal <em>Journal</em>}</li>
- *   <li>{@link proectCalendar.impl.VcalendarImpl#getEvent <em>Event</em>}</li>
- *   <li>{@link proectCalendar.impl.VcalendarImpl#getTimezone <em>Timezone</em>}</li>
- *   <li>{@link proectCalendar.impl.VcalendarImpl#getFreebusy <em>Freebusy</em>}</li>
  *   <li>{@link proectCalendar.impl.VcalendarImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link proectCalendar.impl.VcalendarImpl#getProdid <em>Prodid</em>}</li>
+ *   <li>{@link proectCalendar.impl.VcalendarImpl#getInstruction <em>Instruction</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcalendar {
-	/**
-	 * The cached value of the '{@link #getTodo() <em>Todo</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTodo()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Vtodo> todo;
-
-	/**
-	 * The cached value of the '{@link #getJournal() <em>Journal</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJournal()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Vjournal> journal;
-
-	/**
-	 * The cached value of the '{@link #getEvent() <em>Event</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEvent()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Vevent> event;
-
-	/**
-	 * The cached value of the '{@link #getTimezone() <em>Timezone</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTimezone()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Vtimezone> timezone;
-
-	/**
-	 * The cached value of the '{@link #getFreebusy() <em>Freebusy</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFreebusy()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Freebusy> freebusy;
-
 	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -137,6 +75,16 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	protected String prodid = PRODID_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getInstruction() <em>Instruction</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstruction()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Instruction> instruction;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -153,69 +101,6 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	@Override
 	protected EClass eStaticClass() {
 		return ProectCalendarPackage.Literals.VCALENDAR;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Vtodo> getTodo() {
-		if (todo == null) {
-			todo = new EObjectContainmentEList<Vtodo>(Vtodo.class, this, ProectCalendarPackage.VCALENDAR__TODO);
-		}
-		return todo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Vjournal> getJournal() {
-		if (journal == null) {
-			journal = new EObjectContainmentEList<Vjournal>(Vjournal.class, this,
-					ProectCalendarPackage.VCALENDAR__JOURNAL);
-		}
-		return journal;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Vevent> getEvent() {
-		if (event == null) {
-			event = new EObjectContainmentEList<Vevent>(Vevent.class, this, ProectCalendarPackage.VCALENDAR__EVENT);
-		}
-		return event;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Vtimezone> getTimezone() {
-		if (timezone == null) {
-			timezone = new EObjectContainmentEList<Vtimezone>(Vtimezone.class, this,
-					ProectCalendarPackage.VCALENDAR__TIMEZONE);
-		}
-		return timezone;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Freebusy> getFreebusy() {
-		if (freebusy == null) {
-			freebusy = new EObjectContainmentEList<Freebusy>(Freebusy.class, this,
-					ProectCalendarPackage.VCALENDAR__FREEBUSY);
-		}
-		return freebusy;
 	}
 
 	/**
@@ -267,19 +152,35 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Instruction> getInstruction() {
+		if (instruction == null) {
+			instruction = new EObjectContainmentEList<Instruction>(Instruction.class, this,
+					ProectCalendarPackage.VCALENDAR__INSTRUCTION);
+		}
+		return instruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void accept(VcalendarVisitor visitor) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ProectCalendarPackage.VCALENDAR__TODO:
-			return ((InternalEList<?>) getTodo()).basicRemove(otherEnd, msgs);
-		case ProectCalendarPackage.VCALENDAR__JOURNAL:
-			return ((InternalEList<?>) getJournal()).basicRemove(otherEnd, msgs);
-		case ProectCalendarPackage.VCALENDAR__EVENT:
-			return ((InternalEList<?>) getEvent()).basicRemove(otherEnd, msgs);
-		case ProectCalendarPackage.VCALENDAR__TIMEZONE:
-			return ((InternalEList<?>) getTimezone()).basicRemove(otherEnd, msgs);
-		case ProectCalendarPackage.VCALENDAR__FREEBUSY:
-			return ((InternalEList<?>) getFreebusy()).basicRemove(otherEnd, msgs);
+		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+			return ((InternalEList<?>) getInstruction()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -292,20 +193,12 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProectCalendarPackage.VCALENDAR__TODO:
-			return getTodo();
-		case ProectCalendarPackage.VCALENDAR__JOURNAL:
-			return getJournal();
-		case ProectCalendarPackage.VCALENDAR__EVENT:
-			return getEvent();
-		case ProectCalendarPackage.VCALENDAR__TIMEZONE:
-			return getTimezone();
-		case ProectCalendarPackage.VCALENDAR__FREEBUSY:
-			return getFreebusy();
 		case ProectCalendarPackage.VCALENDAR__VERSION:
 			return getVersion();
 		case ProectCalendarPackage.VCALENDAR__PRODID:
 			return getProdid();
+		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+			return getInstruction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,31 +212,15 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProectCalendarPackage.VCALENDAR__TODO:
-			getTodo().clear();
-			getTodo().addAll((Collection<? extends Vtodo>) newValue);
-			return;
-		case ProectCalendarPackage.VCALENDAR__JOURNAL:
-			getJournal().clear();
-			getJournal().addAll((Collection<? extends Vjournal>) newValue);
-			return;
-		case ProectCalendarPackage.VCALENDAR__EVENT:
-			getEvent().clear();
-			getEvent().addAll((Collection<? extends Vevent>) newValue);
-			return;
-		case ProectCalendarPackage.VCALENDAR__TIMEZONE:
-			getTimezone().clear();
-			getTimezone().addAll((Collection<? extends Vtimezone>) newValue);
-			return;
-		case ProectCalendarPackage.VCALENDAR__FREEBUSY:
-			getFreebusy().clear();
-			getFreebusy().addAll((Collection<? extends Freebusy>) newValue);
-			return;
 		case ProectCalendarPackage.VCALENDAR__VERSION:
 			setVersion((String) newValue);
 			return;
 		case ProectCalendarPackage.VCALENDAR__PRODID:
 			setProdid((String) newValue);
+			return;
+		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+			getInstruction().clear();
+			getInstruction().addAll((Collection<? extends Instruction>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -357,26 +234,14 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProectCalendarPackage.VCALENDAR__TODO:
-			getTodo().clear();
-			return;
-		case ProectCalendarPackage.VCALENDAR__JOURNAL:
-			getJournal().clear();
-			return;
-		case ProectCalendarPackage.VCALENDAR__EVENT:
-			getEvent().clear();
-			return;
-		case ProectCalendarPackage.VCALENDAR__TIMEZONE:
-			getTimezone().clear();
-			return;
-		case ProectCalendarPackage.VCALENDAR__FREEBUSY:
-			getFreebusy().clear();
-			return;
 		case ProectCalendarPackage.VCALENDAR__VERSION:
 			setVersion(VERSION_EDEFAULT);
 			return;
 		case ProectCalendarPackage.VCALENDAR__PRODID:
 			setProdid(PRODID_EDEFAULT);
+			return;
+		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+			getInstruction().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -390,22 +255,29 @@ public class VcalendarImpl extends MinimalEObjectImpl.Container implements Vcale
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProectCalendarPackage.VCALENDAR__TODO:
-			return todo != null && !todo.isEmpty();
-		case ProectCalendarPackage.VCALENDAR__JOURNAL:
-			return journal != null && !journal.isEmpty();
-		case ProectCalendarPackage.VCALENDAR__EVENT:
-			return event != null && !event.isEmpty();
-		case ProectCalendarPackage.VCALENDAR__TIMEZONE:
-			return timezone != null && !timezone.isEmpty();
-		case ProectCalendarPackage.VCALENDAR__FREEBUSY:
-			return freebusy != null && !freebusy.isEmpty();
 		case ProectCalendarPackage.VCALENDAR__VERSION:
 			return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 		case ProectCalendarPackage.VCALENDAR__PRODID:
 			return PRODID_EDEFAULT == null ? prodid != null : !PRODID_EDEFAULT.equals(prodid);
+		case ProectCalendarPackage.VCALENDAR__INSTRUCTION:
+			return instruction != null && !instruction.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case ProectCalendarPackage.VCALENDAR___ACCEPT__VCALENDARVISITOR:
+			accept((VcalendarVisitor) arguments.get(0));
+			return null;
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

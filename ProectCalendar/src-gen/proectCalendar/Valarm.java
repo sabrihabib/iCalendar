@@ -135,4 +135,12 @@ public interface Valarm extends EObject {
 	 */
 	void setDescription(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void accept(VcalendarVisitor visitor);
+
 } // Valarm

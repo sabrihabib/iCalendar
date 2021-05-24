@@ -173,4 +173,12 @@ public interface Vevent extends EObject {
 	 */
 	void setDuration(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void accept(VcalendarVisitor visitor);
+
 } // Vevent

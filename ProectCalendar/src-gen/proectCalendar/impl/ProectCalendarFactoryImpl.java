@@ -74,6 +74,8 @@ public class ProectCalendarFactoryImpl extends EFactoryImpl implements ProectCal
 			return createStandard();
 		case ProectCalendarPackage.DAYLIGHT:
 			return createDaylight();
+		case ProectCalendarPackage.INSTRUCTION:
+			return createInstruction();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -167,6 +169,16 @@ public class ProectCalendarFactoryImpl extends EFactoryImpl implements ProectCal
 	public Daylight createDaylight() {
 		DaylightImpl daylight = new DaylightImpl();
 		return daylight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Instruction createInstruction() {
+		InstructionImpl instruction = new InstructionImpl();
+		return instruction;
 	}
 
 	/**

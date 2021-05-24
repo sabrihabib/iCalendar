@@ -117,4 +117,12 @@ public interface Vtimezone extends EObject {
 	 */
 	EList<Daylight> getDaylight();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void accept(VcalendarVisitor visitor);
+
 } // Vtimezone

@@ -103,6 +103,15 @@ public interface ProectCalendarFactory extends EFactory {
 	Daylight createDaylight();
 
 	/**
+	 * Returns a new object of class '<em>Instruction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Instruction</em>'.
+	 * @generated
+	 */
+	Instruction createInstruction();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

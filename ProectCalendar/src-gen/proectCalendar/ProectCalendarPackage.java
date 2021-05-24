@@ -4,6 +4,7 @@ package proectCalendar;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -67,58 +68,13 @@ public interface ProectCalendarPackage extends EPackage {
 	int VCALENDAR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Todo</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VCALENDAR__TODO = 0;
-
-	/**
-	 * The feature id for the '<em><b>Journal</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VCALENDAR__JOURNAL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Event</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VCALENDAR__EVENT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Timezone</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VCALENDAR__TIMEZONE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Freebusy</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VCALENDAR__FREEBUSY = 4;
-
-	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VCALENDAR__VERSION = 5;
+	int VCALENDAR__VERSION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Prodid</b></em>' attribute.
@@ -127,7 +83,16 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VCALENDAR__PRODID = 6;
+	int VCALENDAR__PRODID = 1;
+
+	/**
+	 * The feature id for the '<em><b>Instruction</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR__INSTRUCTION = 2;
 
 	/**
 	 * The number of structural features of the '<em>Vcalendar</em>' class.
@@ -136,7 +101,16 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VCALENDAR_FEATURE_COUNT = 7;
+	int VCALENDAR_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR___ACCEPT__VCALENDARVISITOR = 0;
 
 	/**
 	 * The number of operations of the '<em>Vcalendar</em>' class.
@@ -145,7 +119,7 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VCALENDAR_OPERATION_COUNT = 0;
+	int VCALENDAR_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.VtodoImpl <em>Vtodo</em>}' class.
@@ -239,13 +213,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int VTODO_FEATURE_COUNT = 8;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTODO___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Vtodo</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTODO_OPERATION_COUNT = 0;
+	int VTODO_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.ValarmImpl <em>Valarm</em>}' class.
@@ -312,13 +295,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int VALARM_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALARM___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Valarm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALARM_OPERATION_COUNT = 0;
+	int VALARM_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.VjournalImpl <em>Vjournal</em>}' class.
@@ -385,13 +377,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int VJOURNAL_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VJOURNAL___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Vjournal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VJOURNAL_OPERATION_COUNT = 0;
+	int VJOURNAL_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.VeventImpl <em>Vevent</em>}' class.
@@ -476,13 +477,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int VEVENT_FEATURE_COUNT = 7;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VEVENT___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Vevent</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VEVENT_OPERATION_COUNT = 0;
+	int VEVENT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.VtimezoneImpl <em>Vtimezone</em>}' class.
@@ -549,13 +559,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int VTIMEZONE_FEATURE_COUNT = 5;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTIMEZONE___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Vtimezone</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTIMEZONE_OPERATION_COUNT = 0;
+	int VTIMEZONE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.FreebusyImpl <em>Freebusy</em>}' class.
@@ -631,13 +650,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int FREEBUSY_FEATURE_COUNT = 6;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FREEBUSY___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Freebusy</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FREEBUSY_OPERATION_COUNT = 0;
+	int FREEBUSY_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.StandardImpl <em>Standard</em>}' class.
@@ -659,13 +687,22 @@ public interface ProectCalendarPackage extends EPackage {
 	int STANDARD_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Standard</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STANDARD_OPERATION_COUNT = 0;
+	int STANDARD_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link proectCalendar.impl.DaylightImpl <em>Daylight</em>}' class.
@@ -687,13 +724,186 @@ public interface ProectCalendarPackage extends EPackage {
 	int DAYLIGHT_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DAYLIGHT___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
 	 * The number of operations of the '<em>Daylight</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DAYLIGHT_OPERATION_COUNT = 0;
+	int DAYLIGHT_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link proectCalendar.impl.InstructionImpl <em>Instruction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proectCalendar.impl.InstructionImpl
+	 * @see proectCalendar.impl.ProectCalendarPackageImpl#getInstruction()
+	 * @generated
+	 */
+	int INSTRUCTION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Todo</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION__TODO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Journal</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION__JOURNAL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Event</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION__EVENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Timezone</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION__TIMEZONE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Freebusy</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION__FREEBUSY = 4;
+
+	/**
+	 * The number of structural features of the '<em>Instruction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_FEATURE_COUNT = 5;
+
+	/**
+	 * The operation id for the '<em>Accept</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION___ACCEPT__VCALENDARVISITOR = 0;
+
+	/**
+	 * The number of operations of the '<em>Instruction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INSTRUCTION_OPERATION_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link proectCalendar.impl.VcalendarVisitorImpl <em>Vcalendar Visitor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see proectCalendar.impl.VcalendarVisitorImpl
+	 * @see proectCalendar.impl.ProectCalendarPackageImpl#getVcalendarVisitor()
+	 * @generated
+	 */
+	int VCALENDAR_VISITOR = 10;
+
+	/**
+	 * The number of structural features of the '<em>Vcalendar Visitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__VCALENDAR = 0;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__VTODO = 1;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__VJOURNAL = 2;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__VEVENT = 3;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__VTIMEZONE = 4;
+
+	/**
+	 * The operation id for the '<em>Visit</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR___VISIT__FREEBUSY = 5;
+
+	/**
+	 * The number of operations of the '<em>Vcalendar Visitor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VCALENDAR_VISITOR_OPERATION_COUNT = 6;
 
 	/**
 	 * Returns the meta object for class '{@link proectCalendar.Vcalendar <em>Vcalendar</em>}'.
@@ -704,61 +914,6 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVcalendar();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getTodo <em>Todo</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Todo</em>'.
-	 * @see proectCalendar.Vcalendar#getTodo()
-	 * @see #getVcalendar()
-	 * @generated
-	 */
-	EReference getVcalendar_Todo();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getJournal <em>Journal</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Journal</em>'.
-	 * @see proectCalendar.Vcalendar#getJournal()
-	 * @see #getVcalendar()
-	 * @generated
-	 */
-	EReference getVcalendar_Journal();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getEvent <em>Event</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Event</em>'.
-	 * @see proectCalendar.Vcalendar#getEvent()
-	 * @see #getVcalendar()
-	 * @generated
-	 */
-	EReference getVcalendar_Event();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getTimezone <em>Timezone</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Timezone</em>'.
-	 * @see proectCalendar.Vcalendar#getTimezone()
-	 * @see #getVcalendar()
-	 * @generated
-	 */
-	EReference getVcalendar_Timezone();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getFreebusy <em>Freebusy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Freebusy</em>'.
-	 * @see proectCalendar.Vcalendar#getFreebusy()
-	 * @see #getVcalendar()
-	 * @generated
-	 */
-	EReference getVcalendar_Freebusy();
 
 	/**
 	 * Returns the meta object for the attribute '{@link proectCalendar.Vcalendar#getVersion <em>Version</em>}'.
@@ -781,6 +936,27 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVcalendar_Prodid();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Vcalendar#getInstruction <em>Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Instruction</em>'.
+	 * @see proectCalendar.Vcalendar#getInstruction()
+	 * @see #getVcalendar()
+	 * @generated
+	 */
+	EReference getVcalendar_Instruction();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.Vcalendar#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Vcalendar#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getVcalendar__Accept__VcalendarVisitor();
 
 	/**
 	 * Returns the meta object for class '{@link proectCalendar.Vtodo <em>Vtodo</em>}'.
@@ -881,6 +1057,16 @@ public interface ProectCalendarPackage extends EPackage {
 	EAttribute getVtodo_Status();
 
 	/**
+	 * Returns the meta object for the '{@link proectCalendar.Vtodo#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Vtodo#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getVtodo__Accept__VcalendarVisitor();
+
+	/**
 	 * Returns the meta object for class '{@link proectCalendar.Valarm <em>Valarm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -946,6 +1132,16 @@ public interface ProectCalendarPackage extends EPackage {
 	EAttribute getValarm_Description();
 
 	/**
+	 * Returns the meta object for the '{@link proectCalendar.Valarm#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Valarm#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getValarm__Accept__VcalendarVisitor();
+
+	/**
 	 * Returns the meta object for class '{@link proectCalendar.Vjournal <em>Vjournal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,6 +1205,16 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVjournal_Summuary();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.Vjournal#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Vjournal#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getVjournal__Accept__VcalendarVisitor();
 
 	/**
 	 * Returns the meta object for class '{@link proectCalendar.Vevent <em>Vevent</em>}'.
@@ -1098,6 +1304,16 @@ public interface ProectCalendarPackage extends EPackage {
 	EAttribute getVevent_Duration();
 
 	/**
+	 * Returns the meta object for the '{@link proectCalendar.Vevent#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Vevent#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getVevent__Accept__VcalendarVisitor();
+
+	/**
 	 * Returns the meta object for class '{@link proectCalendar.Vtimezone <em>Vtimezone</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1161,6 +1377,16 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVtimezone_Daylight();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.Vtimezone#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Vtimezone#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getVtimezone__Accept__VcalendarVisitor();
 
 	/**
 	 * Returns the meta object for class '{@link proectCalendar.Freebusy <em>Freebusy</em>}'.
@@ -1239,6 +1465,16 @@ public interface ProectCalendarPackage extends EPackage {
 	EAttribute getFreebusy_Organizer();
 
 	/**
+	 * Returns the meta object for the '{@link proectCalendar.Freebusy#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Freebusy#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getFreebusy__Accept__VcalendarVisitor();
+
+	/**
 	 * Returns the meta object for class '{@link proectCalendar.Standard <em>Standard</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1249,6 +1485,16 @@ public interface ProectCalendarPackage extends EPackage {
 	EClass getStandard();
 
 	/**
+	 * Returns the meta object for the '{@link proectCalendar.Standard#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Standard#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getStandard__Accept__VcalendarVisitor();
+
+	/**
 	 * Returns the meta object for class '{@link proectCalendar.Daylight <em>Daylight</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1257,6 +1503,161 @@ public interface ProectCalendarPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getDaylight();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.Daylight#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Daylight#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getDaylight__Accept__VcalendarVisitor();
+
+	/**
+	 * Returns the meta object for class '{@link proectCalendar.Instruction <em>Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Instruction</em>'.
+	 * @see proectCalendar.Instruction
+	 * @generated
+	 */
+	EClass getInstruction();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Instruction#getTodo <em>Todo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Todo</em>'.
+	 * @see proectCalendar.Instruction#getTodo()
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	EReference getInstruction_Todo();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Instruction#getJournal <em>Journal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Journal</em>'.
+	 * @see proectCalendar.Instruction#getJournal()
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	EReference getInstruction_Journal();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Instruction#getEvent <em>Event</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Event</em>'.
+	 * @see proectCalendar.Instruction#getEvent()
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	EReference getInstruction_Event();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Instruction#getTimezone <em>Timezone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Timezone</em>'.
+	 * @see proectCalendar.Instruction#getTimezone()
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	EReference getInstruction_Timezone();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link proectCalendar.Instruction#getFreebusy <em>Freebusy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Freebusy</em>'.
+	 * @see proectCalendar.Instruction#getFreebusy()
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	EReference getInstruction_Freebusy();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.Instruction#accept(proectCalendar.VcalendarVisitor) <em>Accept</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Accept</em>' operation.
+	 * @see proectCalendar.Instruction#accept(proectCalendar.VcalendarVisitor)
+	 * @generated
+	 */
+	EOperation getInstruction__Accept__VcalendarVisitor();
+
+	/**
+	 * Returns the meta object for class '{@link proectCalendar.VcalendarVisitor <em>Vcalendar Visitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Vcalendar Visitor</em>'.
+	 * @see proectCalendar.VcalendarVisitor
+	 * @generated
+	 */
+	EClass getVcalendarVisitor();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Vcalendar) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Vcalendar)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Vcalendar();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Vtodo) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Vtodo)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Vtodo();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Vjournal) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Vjournal)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Vjournal();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Vevent) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Vevent)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Vevent();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Vtimezone) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Vtimezone)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Vtimezone();
+
+	/**
+	 * Returns the meta object for the '{@link proectCalendar.VcalendarVisitor#visit(proectCalendar.Freebusy) <em>Visit</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Visit</em>' operation.
+	 * @see proectCalendar.VcalendarVisitor#visit(proectCalendar.Freebusy)
+	 * @generated
+	 */
+	EOperation getVcalendarVisitor__Visit__Freebusy();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1292,46 +1693,6 @@ public interface ProectCalendarPackage extends EPackage {
 		EClass VCALENDAR = eINSTANCE.getVcalendar();
 
 		/**
-		 * The meta object literal for the '<em><b>Todo</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VCALENDAR__TODO = eINSTANCE.getVcalendar_Todo();
-
-		/**
-		 * The meta object literal for the '<em><b>Journal</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VCALENDAR__JOURNAL = eINSTANCE.getVcalendar_Journal();
-
-		/**
-		 * The meta object literal for the '<em><b>Event</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VCALENDAR__EVENT = eINSTANCE.getVcalendar_Event();
-
-		/**
-		 * The meta object literal for the '<em><b>Timezone</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VCALENDAR__TIMEZONE = eINSTANCE.getVcalendar_Timezone();
-
-		/**
-		 * The meta object literal for the '<em><b>Freebusy</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VCALENDAR__FREEBUSY = eINSTANCE.getVcalendar_Freebusy();
-
-		/**
 		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1346,6 +1707,22 @@ public interface ProectCalendarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VCALENDAR__PRODID = eINSTANCE.getVcalendar_Prodid();
+
+		/**
+		 * The meta object literal for the '<em><b>Instruction</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VCALENDAR__INSTRUCTION = eINSTANCE.getVcalendar_Instruction();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR___ACCEPT__VCALENDARVISITOR = eINSTANCE.getVcalendar__Accept__VcalendarVisitor();
 
 		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.VtodoImpl <em>Vtodo</em>}' class.
@@ -1422,6 +1799,14 @@ public interface ProectCalendarPackage extends EPackage {
 		EAttribute VTODO__STATUS = eINSTANCE.getVtodo_Status();
 
 		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VTODO___ACCEPT__VCALENDARVISITOR = eINSTANCE.getVtodo__Accept__VcalendarVisitor();
+
+		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.ValarmImpl <em>Valarm</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1472,6 +1857,14 @@ public interface ProectCalendarPackage extends EPackage {
 		EAttribute VALARM__DESCRIPTION = eINSTANCE.getValarm_Description();
 
 		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VALARM___ACCEPT__VCALENDARVISITOR = eINSTANCE.getValarm__Accept__VcalendarVisitor();
+
+		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.VjournalImpl <em>Vjournal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1520,6 +1913,14 @@ public interface ProectCalendarPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VJOURNAL__SUMMUARY = eINSTANCE.getVjournal_Summuary();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VJOURNAL___ACCEPT__VCALENDARVISITOR = eINSTANCE.getVjournal__Accept__VcalendarVisitor();
 
 		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.VeventImpl <em>Vevent</em>}' class.
@@ -1588,6 +1989,14 @@ public interface ProectCalendarPackage extends EPackage {
 		EAttribute VEVENT__DURATION = eINSTANCE.getVevent_Duration();
 
 		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VEVENT___ACCEPT__VCALENDARVISITOR = eINSTANCE.getVevent__Accept__VcalendarVisitor();
+
+		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.VtimezoneImpl <em>Vtimezone</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1636,6 +2045,14 @@ public interface ProectCalendarPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTIMEZONE__DAYLIGHT = eINSTANCE.getVtimezone_Daylight();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VTIMEZONE___ACCEPT__VCALENDARVISITOR = eINSTANCE.getVtimezone__Accept__VcalendarVisitor();
 
 		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.FreebusyImpl <em>Freebusy</em>}' class.
@@ -1696,6 +2113,14 @@ public interface ProectCalendarPackage extends EPackage {
 		EAttribute FREEBUSY__ORGANIZER = eINSTANCE.getFreebusy_Organizer();
 
 		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation FREEBUSY___ACCEPT__VCALENDARVISITOR = eINSTANCE.getFreebusy__Accept__VcalendarVisitor();
+
+		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.StandardImpl <em>Standard</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1706,6 +2131,14 @@ public interface ProectCalendarPackage extends EPackage {
 		EClass STANDARD = eINSTANCE.getStandard();
 
 		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation STANDARD___ACCEPT__VCALENDARVISITOR = eINSTANCE.getStandard__Accept__VcalendarVisitor();
+
+		/**
 		 * The meta object literal for the '{@link proectCalendar.impl.DaylightImpl <em>Daylight</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1714,6 +2147,130 @@ public interface ProectCalendarPackage extends EPackage {
 		 * @generated
 		 */
 		EClass DAYLIGHT = eINSTANCE.getDaylight();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation DAYLIGHT___ACCEPT__VCALENDARVISITOR = eINSTANCE.getDaylight__Accept__VcalendarVisitor();
+
+		/**
+		 * The meta object literal for the '{@link proectCalendar.impl.InstructionImpl <em>Instruction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see proectCalendar.impl.InstructionImpl
+		 * @see proectCalendar.impl.ProectCalendarPackageImpl#getInstruction()
+		 * @generated
+		 */
+		EClass INSTRUCTION = eINSTANCE.getInstruction();
+
+		/**
+		 * The meta object literal for the '<em><b>Todo</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTION__TODO = eINSTANCE.getInstruction_Todo();
+
+		/**
+		 * The meta object literal for the '<em><b>Journal</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTION__JOURNAL = eINSTANCE.getInstruction_Journal();
+
+		/**
+		 * The meta object literal for the '<em><b>Event</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTION__EVENT = eINSTANCE.getInstruction_Event();
+
+		/**
+		 * The meta object literal for the '<em><b>Timezone</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTION__TIMEZONE = eINSTANCE.getInstruction_Timezone();
+
+		/**
+		 * The meta object literal for the '<em><b>Freebusy</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INSTRUCTION__FREEBUSY = eINSTANCE.getInstruction_Freebusy();
+
+		/**
+		 * The meta object literal for the '<em><b>Accept</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation INSTRUCTION___ACCEPT__VCALENDARVISITOR = eINSTANCE.getInstruction__Accept__VcalendarVisitor();
+
+		/**
+		 * The meta object literal for the '{@link proectCalendar.impl.VcalendarVisitorImpl <em>Vcalendar Visitor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see proectCalendar.impl.VcalendarVisitorImpl
+		 * @see proectCalendar.impl.ProectCalendarPackageImpl#getVcalendarVisitor()
+		 * @generated
+		 */
+		EClass VCALENDAR_VISITOR = eINSTANCE.getVcalendarVisitor();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__VCALENDAR = eINSTANCE.getVcalendarVisitor__Visit__Vcalendar();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__VTODO = eINSTANCE.getVcalendarVisitor__Visit__Vtodo();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__VJOURNAL = eINSTANCE.getVcalendarVisitor__Visit__Vjournal();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__VEVENT = eINSTANCE.getVcalendarVisitor__Visit__Vevent();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__VTIMEZONE = eINSTANCE.getVcalendarVisitor__Visit__Vtimezone();
+
+		/**
+		 * The meta object literal for the '<em><b>Visit</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VCALENDAR_VISITOR___VISIT__FREEBUSY = eINSTANCE.getVcalendarVisitor__Visit__Freebusy();
 
 	}
 

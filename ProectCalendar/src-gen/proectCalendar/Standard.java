@@ -15,4 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Standard extends EObject {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void accept(VcalendarVisitor visitor);
 } // Standard

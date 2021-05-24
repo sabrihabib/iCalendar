@@ -112,6 +112,16 @@ public class ProectCalendarAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseInstruction(Instruction object) {
+			return createInstructionAdapter();
+		}
+
+		@Override
+		public Adapter caseVcalendarVisitor(VcalendarVisitor object) {
+			return createVcalendarVisitorAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -253,6 +263,34 @@ public class ProectCalendarAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDaylightAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link proectCalendar.Instruction <em>Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see proectCalendar.Instruction
+	 * @generated
+	 */
+	public Adapter createInstructionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link proectCalendar.VcalendarVisitor <em>Vcalendar Visitor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see proectCalendar.VcalendarVisitor
+	 * @generated
+	 */
+	public Adapter createVcalendarVisitorAdapter() {
 		return null;
 	}
 

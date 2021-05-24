@@ -280,6 +280,29 @@ public class ProectCalendarItemProviderAdapterFactory extends ProectCalendarAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link proectCalendar.Instruction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InstructionItemProvider instructionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link proectCalendar.Instruction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInstructionAdapter() {
+		if (instructionItemProvider == null) {
+			instructionItemProvider = new InstructionItemProvider(this);
+		}
+
+		return instructionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +419,8 @@ public class ProectCalendarItemProviderAdapterFactory extends ProectCalendarAdap
 			standardItemProvider.dispose();
 		if (daylightItemProvider != null)
 			daylightItemProvider.dispose();
+		if (instructionItemProvider != null)
+			instructionItemProvider.dispose();
 	}
 
 }

@@ -135,4 +135,12 @@ public interface Vjournal extends EObject {
 	 */
 	void setSummuary(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void accept(VcalendarVisitor visitor);
+
 } // Vjournal

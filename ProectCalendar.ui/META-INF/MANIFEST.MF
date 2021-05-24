@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: A Menu For Calendar
-Bundle-SymbolicName: ProectCalendar.ui;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: AYMEN&TOM
-Automatic-Module-Name: ProectCalendar.ui
-Bundle-RequiredExecutionEnvironment: JavaSE-11
-Require-Bundle: org.eclipse.ui;bundle-version="3.119.0"

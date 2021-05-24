@@ -129,6 +129,20 @@ public class ProectCalendarSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ProectCalendarPackage.INSTRUCTION: {
+			Instruction instruction = (Instruction) theEObject;
+			T result = caseInstruction(instruction);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProectCalendarPackage.VCALENDAR_VISITOR: {
+			VcalendarVisitor vcalendarVisitor = (VcalendarVisitor) theEObject;
+			T result = caseVcalendarVisitor(vcalendarVisitor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -268,6 +282,48 @@ public class ProectCalendarSwitch<T> extends Switch<T> {
 	public T caseDaylight(Daylight object) {
 		return null;
 	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instruction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instruction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInstruction(Instruction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vcalendar Visitor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vcalendar Visitor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVcalendarVisitor(VcalendarVisitor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Instruction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Instruction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
 
 	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.

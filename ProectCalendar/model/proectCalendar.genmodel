@@ -10,13 +10,12 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="ProectCalendar" disposableProviderFactory="true" ecorePackage="proectCalendar.ecore#/">
     <genClasses ecoreClass="proectCalendar.ecore#//Vcalendar">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/todo"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/journal"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/event"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/timezone"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/freebusy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vcalendar/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vcalendar/prodid"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vcalendar/instruction"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Vcalendar/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Vcalendar/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vtodo">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtodo/alarm"/>
@@ -27,6 +26,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/created"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtodo/status"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Vtodo/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Vtodo/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Valarm">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/action"/>
@@ -34,6 +36,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/duration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/repeat"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Valarm/description"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Valarm/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Valarm/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vjournal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/dtstamp"/>
@@ -41,6 +46,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/dtstart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vjournal/summuary"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Vjournal/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Vjournal/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vevent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vevent/alarm"/>
@@ -50,6 +58,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/dtstart"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/dtend"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vevent/duration"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Vevent/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Vevent/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Vtimezone">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/standard"/>
@@ -57,6 +68,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtimezone/last_mod"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Vtimezone/tzurl"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Vtimezone/daylight"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Vtimezone/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Vtimezone/accept/visitor"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="proectCalendar.ecore#//Freebusy">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/uid"/>
@@ -65,8 +79,49 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/dtend"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/attendee"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute proectCalendar.ecore#//Freebusy/organizer"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Freebusy/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Freebusy/accept/visitor"/>
+      </genOperations>
     </genClasses>
-    <genClasses ecoreClass="proectCalendar.ecore#//Standard"/>
-    <genClasses ecoreClass="proectCalendar.ecore#//Daylight"/>
+    <genClasses ecoreClass="proectCalendar.ecore#//Standard">
+      <genOperations ecoreOperation="proectCalendar.ecore#//Standard/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Standard/accept/visitor"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="proectCalendar.ecore#//Daylight">
+      <genOperations ecoreOperation="proectCalendar.ecore#//Daylight/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Daylight/accept/visitor"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="proectCalendar.ecore#//Instruction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Instruction/todo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Instruction/journal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Instruction/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Instruction/timezone"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference proectCalendar.ecore#//Instruction/freebusy"/>
+      <genOperations ecoreOperation="proectCalendar.ecore#//Instruction/accept">
+        <genParameters ecoreParameter="proectCalendar.ecore#//Instruction/accept/visitor"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="proectCalendar.ecore#//VcalendarVisitor">
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit/vcalendar"/>
+      </genOperations>
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit.1">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit.1/vtodo"/>
+      </genOperations>
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit.2">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit.2/vjournal"/>
+      </genOperations>
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit.3">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit.3/vevent"/>
+      </genOperations>
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit.4">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit.4/vtimezone"/>
+      </genOperations>
+      <genOperations ecoreOperation="proectCalendar.ecore#//VcalendarVisitor/visit.5">
+        <genParameters ecoreParameter="proectCalendar.ecore#//VcalendarVisitor/visit.5/freebusy"/>
+      </genOperations>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
